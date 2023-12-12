@@ -1,0 +1,64 @@
+header h1 {
+  text-align: center;
+  font-size: 2.4rem;
+  margin-top: -60px;
+  color: #83bad8;
+  font-family: "Lora", sans-serif;
+}
+
+header h2 {
+  text-align: center;
+  font-size: 1rem;
+  margin-top: -30px;
+  color: #83bad8;
+  font-family: "Lora", sans-serif;
+}
+
+header {
+  height: 100px;
+  margin-bottom:30px; 
+}
+
+.upper {
+  margin-top: 0px;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+nav li {
+  list-style-type: none;
+  background-color: #83bad8;
+  color: #fff;
+  padding: 6px;
+}
+
+header img {
+  width: 100px;
+}
+
+header section {
+  height: 70px;
+}
+
+header nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+nav a {
+  color: #fff;
+}
+
+nav {
+  background-color: #83bad8;
+}
+
+nav a:hover, a:active
+{
+  text-decoration: underline;
+}
+
+

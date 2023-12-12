@@ -1,0 +1,52 @@
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  margin-bottom: 15px;
+  margin-top: 20px;
+  width: 400px;
+  height: 30px;
+}
+
+.form {
+  width: 660px;
+  background-color: #83bad8;
+  margin: auto;
+  padding-bottom: 15px;
+  padding-top: 5px;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+h2 {
+  text-align: center;
+  color: #fff;
+}
+
+textarea {
+  margin-bottom: 15px;
+  margin-top: 20px;
+  width: 400px;
+  height: 200px;
+}
+
+.contact {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+p {
+  width: 80%;
+  margin: auto;
+  font-size: 1.4rem;
+}

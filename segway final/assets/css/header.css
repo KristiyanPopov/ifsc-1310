@@ -1,0 +1,42 @@
+header {
+  height: 105px;
+  margin-bottom: 30px;
+  background-color: #1d3751;
+}
+
+nav a {
+  text-decoration: none;
+  margin-bottom: 40px;
+}
+
+nav li {
+  list-style-type: none;
+  color: #fff;
+  padding: 6px;
+  font-size: 1.4rem;
+  margin-left: 150px;
+}
+
+header img {
+  width: 150px;
+  margin-left: 30px;
+}
+
+header nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  align-items: end;
+  float: right;
+  margin-top: -60px;
+  padding-right: 40px;
+}
+
+nav a {
+  color: #fff;
+}
+
+nav a:hover,
+a:active {
+  color: #83bad8;
+}

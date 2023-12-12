@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>IFSC 1310 - Prototype</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="Keyword rich narrative on site purpose">
+  <meta name="author" content="Thomas Wallace">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<style>
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+img{
+  max-width:100%;
+}
+
+.container{
+  width:80vw;
+  margin:40px auto;
+}
+
+.img-right{
+  float:right;
+  margin: 10px 20px 10px 0;
+  border: 4px double #c0c0c0;
+  padding:5px;
+  box-shadow: 4px 4px 4px 2px rgba(0,0,0,4);
+}
+
+.img-left{
+  float:left;
+  margin: 10px 20px 10px 0;
+  border: 4px double #c0c0c0;
+  padding:5px;
+  box-shadow: 4px 4px 4px 2px rgba(0,0,0,4);
+}
+
+.img-center
+{
+  display:block;
+  margin:20px auto;
+  border: 4px double #c0c0c0;
+  padding:5px;
+  box-shadow: 4px 4px 4px 2px rgba(0,0,0,4);
+}
+
+
+
+
+
+body{
+    font-family: 'Roboto', sans-serif;
+    margin:0;
+  
+}
+
+header.primary{
+ background-color:#3b638b;
+ color:#ffffff;
+ text-align:center;
+ padding:40px;
+  /*long form*/
+  padding-top: 40px;
+  padding-right: 40px;
+  padding-bottom: 40px;
+  padding-left: 40px;  
+   /* T,R,B,L */
+  padding: 20px 40px 20px 40px; 
+  /* Two Value Top/Bottom / L/R */
+  padding: 20px 40px;
+  text-shadow: 1px 1px #000000;
+}
+
+header.primary h1 {
+  font-size: 2.4rem;
+  margin: 20px;
+}
+
+header.primary h1 a{
+  color:#fff;
+  text-decoration:none;
+}
+
+header.primary h2{
+  font-size:1.4rem;
+ 
+}
+
+header.primary nav{
+  max-width:960px;
+  margin: 40px auto 20px auto;
+}
+
+header.primary nav ul{
+  display:flex;
+  flex-direction:row;
+  justify-content:space-evenly;
+  padding:0;
+}
+
+header.primary nav ul li{
+  list-style-type:none;
+}
+
+header.primary nav a{
+  color:#ffffff;
+  font-size:.8rem;
+  text-decoration:none;
+  background-color:#000000;
+  background-color: rgba(0,0,0,.4);
+  padding:8px 16px;
+  border-radius:20px;
+  transition:.5s;
+  border: 1px solid #000;
+}
+
+header.primary nav a:hover,
+header.primary nav a:active
+{
+  background-color: rgba(0,0,0,.8);
+}
+
+#intro{
+  border-bottom: 1px dotted #c0c0c0;
+  padding-bottom:14px;
+}
+
+#intro h2{
+  color:#3b638b;
+  border-bottom: 1px dotted #c0c0c0;
+}
+
+#content{
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+  gap:20px;
+  border-bottom: 1px dotted #c0c0c0;
+  padding-bottom:2.6rem;
+}
+
+#content article.post{
+  box-shadow: 0 4px 8px rgba(0,0,0,.4);
+  padding:10px;
+  font-size:.8rem;
+  transition:.5s;
+
+  
+}
+
+#content article.post:hover{
+  box-shadow: 0 8px 16px rgba(0,0,0,.4);
+}
+
+article.post figure{
+  margin:0;
+}
+
+time.post-date, figcaption, .post-meta{
+  text-transform:uppercase;
+  color:#c0c0c0;
+  font-size:.7rem;
+}
+
+article.post img{
+  border:solid 1px #c0c0c0;
+  padding:2.5px;
+  border-radius:5px;
+}
+
+article.post a{
+ color: #3b638b;
+ transition:.5s;
+}
+
+article.post a:hover{
+ text-decoration:none;
+}
+
+/* Attribute Selector Example
+a[target="_blank"]{
+  color:red;
+}
+*/
+
+aside[role="complementary"]{
+  background-color: #172635;
+  color:#fff;
+  padding:40px;
+}
+
+aside .container{
+  display:flex;
+  flex-direction:row;
+  gap:40px;
+}
+
+aside .container p{
+  line-height:1;
+}
+
+aside .container a:last-of-type{
+  color: #ffffff;
+  display:block;
+  text-align: right;
+  margin-top: 20px;
+  
+}
+
+aside .container a{
+  color: #ffffff;
+}
+
+
+aside .container footer{
+  display:none;
+}
+
+#colophon
+{
+  background: #3b638b;
+}
+
+#colophon h6
+{
+  padding:20px;
+  margin: 0;
+  text-align: center;
+  color: #fff;
+}
+
+@media screen and (max-width:600px){
+  
+  header.primary nav ul{
+    flex-direction:column;
+    max-width:250px;
+    margin:auto;
+    gap:10px;
+  }
+  header.primary nav ul a{
+    display:block;
+  }
+  
+  #content {
+    flex-direction:column;
+  }
+  
+  #content img
+  {
+    display:block;
+    margin:auto;
+  }
+
+  aside .container
+  {
+    flex-direction:column;
+  }
+}
+
+
+#practice h2
+{
+  color: #3b638b;
+  border-bottom: 1px dotted #c0c0c0;
+}
+
+#practice a{
+  color: #3b638b;
+}
+
+#practice a:hover{
+  text-decoration:none;
+}
+
+#practice h3{
+  border-left: 7.5px solid #3b638b;
+  padding-left: 10px;
+}
+
+table{
+  width: 100%;
+  border: 1px solid #c0c0c0;
+  margin: 20px 0;
+}
+
+table caption
+{
+  font-weight:bold;
+  margin:10px;
+}
+
+table th{
+  background-color:#172635;
+  color:#ffffff;
+  padding: 10px;
+ 
+}
+table td{
+   border: 1px solid #c0c0c0;
+  padding: 5px;
+}
+table tr:nth-child(even){
+  background-color:rgba(0,0,0,.1);
+}
+
+table tr:hover
+{
+  background-color:rgba(0,0,0,.2);
+}
+
+table td:nth-child(n+2){
+  text-align:right;
+}
+
+ol
+{
+  list-style-type:lower-roman;
+}
+
+ul li > ul
+{
+  list-style-type:square;
+  color: red;
+}
+
+dt{
+  font-weight: bold;
+}
+
+dd
+{
+  margin:0;
+}
+
+dd + dt
+{
+  color:red;
+}
+  </style>
+<body>
+  <header role="banner" class="primary">
+    <h1><a href="index.html">Building the Modern Web</a></h1>
+    <h2>HTML5, CSS, JavaScript Fundamentals</h2>
+    <nav role="navigation">
+      <ul>
+        <li><a href="https://ualr.edu/">UA Little Rock</a></li>
+        <li><a href="http://learn.shayhowe.com/html-css/getting-to-know-html/">HTML5 & CSS Lessons</a></li>
+        <li><a href="http://www.csszengarden.com/">CSS Zen Garden</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section id="intro" class="container">
+    <h2>Introduction to Web Design</h2>
+    <p>Integer pretium fringilla mauris, sed cursus purus consectetur eu. Donec vitae placerat enim. Nam dictum purus nec diam pharetra, in accumsan ipsum commodo. In varius ligula posuere, sodales erat nec, tempus purus. Quisque eu posuere arcu, ut pellentesque
+      dui. Nam pretium, leo et sollicitudin mollis, sapien mi ultricies tortor, in placerat lectus odio a nisl. Suspendisse feugiat magna id mollis auctor. Nullam neque sem, hendrerit vitae metus at, vestibulum aliquet metus. Quisque dapibus ultrices
+      pulvinar. Aliquam condimentum sapien lorem, in egestas ipsum rhoncus sed. Vivamus congue et eros in cursus. Donec elementum quam sit amet feugiat volutpat. Vestibulum varius laoreet turpis id efficitur. Proin scelerisque volutpat lectus, at fermentum
+      dui euismod sed. In efficitur felis risus, at tempor risus aliquam vel.</p>
+  </section>
+  <section id="content" class="container">
+    <article class="post">
+      <header>
+        <time class="post-date" datetime="2023-02-20">February 20, 2023</time>
+        <figure>
+          <img src="https://via.placeholder.com/300x200" alt="Placeholder">
+          <figcaption>Image Caption</figcaption>
+        </figure>
+        <h2> <a href="#" rel="bookmark" title="link to this post">Article Title</a> </h2>
+      </header>
+      <p>Curabitur facilisis pharetra ultrices. Phasellus eu elementum felis. Etiam cursus mi vitae odio imperdiet, vel fringilla orci porttitor. Cras at tincidunt metus, in lobortis ligula. Fusce metus nisl, efficitur id fringilla quis, luctus non nisi.
+        </p>
+      <footer class="post-meta"> Posted by <a href="#">Post Author</a></footer>
+    </article>
+    <article class="post">
+      <header>
+        <time class="post-date" datetime="2023-02-20">February 20, 2023</time>
+        <figure>
+          <img src="https://via.placeholder.com/300x200" alt="Placeholder">
+          <figcaption>Image Caption</figcaption>
+        </figure>
+        <h2> <a href="#" rel="bookmark" title="link to this post">Article Title</a> </h2>
+      </header>
+      <p>Curabitur facilisis pharetra ultrices. Phasellus eu elementum felis. Etiam cursus mi vitae odio imperdiet, vel fringilla orci porttitor. Cras at tincidunt metus, in lobortis ligula. Fusce metus nisl, efficitur id fringilla quis, luctus non nisi.
+        </p>
+      <footer class="post-meta"> Posted by <a href="#">Post Author</a></footer>
+    </article>
+    <article class="post">
+      <header>
+       <time class="post-date" datetime="2023-02-20">February 20, 2023</time>
+        <figure>
+          <img src="https://via.placeholder.com/300x200" alt="Placeholder">
+          <figcaption>Image Caption</figcaption>
+        </figure>
+        <h2> <a href="#" rel="bookmark" title="link to this post">Article Title</a> </h2>
+      </header>
+      <p>Curabitur facilisis pharetra ultrices. Phasellus eu elementum felis. Etiam cursus mi vitae odio imperdiet, vel fringilla orci porttitor. Cras at tincidunt metus, in lobortis ligula. Fusce metus nisl, efficitur id fringilla quis, luctus non nisi.</p>
+      <footer class="post-meta"> Posted by <a href="#">Post Author</a></footer>
+    </article>
+  </section>
+  <section id="practice" class="container">
+  <h2>Properly Marking up an HTML Document</h2>
+  <!--(Primary Content Heading)-->
+
+  <p>This is a paragraph. <em>Often times designers</em> will use <q>Dummy Text</q> as a <strong>placeholder</strong> in a document. An example of that text follows...Lorem ipsum dolor sit amet, consectetuer <del>adipiscing elit</del>. Praesent volutpat
+    velit sed massa. In volutpat eros sagittis ipsum. Donec fringilla risus nec nunc. Fusce tellus arcu, blandit quis, posuere in, porta vitae, lorem.</p>
+
+  <p> <a href="#">Quisque feugiat arcu eget sapien</a>. <span class="foo">Aenean</span> eget ipsum id arcu bibendum porttitor. Vivamus id lectus non eros eleifend aliquet.</p>
+  <p> <img src="https://thomaswallace.net/wp-content/uploads/2018/02/ualr.png" alt="UA Little Rock Logo" class="img-center" />Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris volutpat. Integer dignissim consequat enim. Praesent velit felis,
+    tempus malesuada, sagittis et, condimentum in, ante. Nulla lobortis, ligula sit amet laoreet sollicitudin, sem arcu lacinia tellus, id lobortis arcu urna tincidunt turpis. <sup><a href="#">1</a></sup> </p>
+
+  <h3>This is a Subsection of the Primary Content</h3>
+  <!-- (Subsection I)-->
+
+  <table>
+    <caption>Grocery List</caption>
+    <thead>
+      <!--Design Time Attribute - Remove before Prodution-->
+      <tr>
+        <th scope="col">Item</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Cost</th>
+      </tr>
+    </thead>
+    <tr>
+      <td>Jolt Extra</td>
+      <td>3</td>
+      <td>.99</td>
+    </tr>
+    <tr>
+      <td>Jolt</td>
+      <td>3</td>
+      <td>.99</td>
+    </tr>
+    <tr>
+      <td>Jolt</td>
+      <td>3</td>
+      <td>.99</td>
+    </tr>
+    <tr>
+      <td>Jolt</td>
+      <td>3</td>
+      <td>.99</td>
+    </tr>
+    <tr>
+      <td>Jolt</td>
+      <td>3</td>
+      <td>.99</td>
+    </tr>
+    <tr>
+      <td>Jolt</td>
+      <td>3</td>
+      <td>.99</td>
+    </tr>
+  </table>
+
+  <p>This is a paragraph. Often times designers will use "Dummy Text" as a placeholder in a document. An example of that text follows...Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent volutpat velit sed massa. In volutpat eros sagittis
+    ipsum. Donec fringilla risus nec nunc. Fusce tellus arcu, blandit quis, posuere in, porta vitae, lorem. Quisque feugiat arcu eget sapien. Aenean eget ipsum id arcu bibendum porttitor. Vivamus id lectus non eros eleifend aliquet. Cum sociis natoque
+    penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris volutpat. Integer dignissim consequat enim. Praesent velit felis, tempus malesuada, sagittis et, condimentum in, ante. Nulla lobortis, ligula sit amet laoreet sollicitudin,
+    sem arcu lacinia tellus, id lobortis arcu urna tincidunt turpis.</p>
+
+  <!--This is a list of instructions.-->
+
+  <ol>
+    <li>Instruction</li>
+    <li>Instruction</li>
+    <li>Instruction</li>
+    <li>Instruction</li>
+    <li>Instruction</li>
+    <li>Instruction</li>
+  </ol>
+
+  <!--This is a list of items to purchase at the grocery store.-->
+
+  <ul>
+    <li>Ramen</li>
+    <li>Cheetos
+      <ul>
+        <li>Ramen</li>
+        <li>Cheetos</li>
+        <li>Jolt</li>
+        <li>Bread</li>
+      </ul>
+    </li>
+    <li>Jolt</li>
+    <li>Bread</li>
+  </ul>
+
+  <!--This is an Example of how we should mark up a term and its description(s)-->
+  <dl>
+    <dt>Term</dt>
+    <dd>Description 1</dd>
+    <dd>Description 2</dd>
+    <dt>Term</dt>
+    <dd>Description 1</dd>
+    <dd>Description 2</dd>
+    <dd>Description 3</dd>
+    <dd>Description 4</dd>
+    <dt>Term</dt>
+    <dd>Description 1</dd>
+  </dl>
+
+  <h4>This is a Subsection of Subsection I</h4>
+
+  <blockquote>This is a Quote. Content precedes design. Design in the absence of content is not design, it's decoration. <cite>From Designing with Web Standards by Jeffery Zeldman.</cite></blockquote>
+
+  <h3>This is a Subsection of the Primary Content</h3>
+  <!--(Subsection II)-->
+
+  <p>This is a paragraph. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent volutpat velit sed massa. In volutpat eros sagittis ipsum. Donec fringilla risus nec nunc. Fusce tellus arcu, blandit quis, posuere in, porta vitae, lorem. Quisque
+    feugiat arcu eget sapien. Aenean eget ipsum id arcu bibendum porttitor. Vivamus id lectus non eros eleifend aliquet. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris volutpat. Integer dignissim consequat
+    enim. Praesent velit felis, tempus malesuada, sagittis et, condimentum in, ante. Nulla lobortis, ligula sit amet laoreet sollicitudin, sem arcu lacinia tellus, id lobortis arcu urna tincidunt turpis. Proin adipiscing ultrices dui. Duis porttitor,
+    libero ut eleifend pellentesque, risus turpis fermentum est, vel nonummy lorem est id nisl. Nulla facilisi. In sagittis tortor. Vestibulum dictum leo vitae augue. Morbi in odio sed nulla luctus sodales.</p>
+</section>
+  <aside role="complementary">
+    <div class="container">
+      <article class="widget">
+        <header>
+          <h2>Sample Sidebar Item </h2>
+        </header>
+        <p>Quisque justo erat, varius placerat fermentum vel, iaculis vel ligula. Phasellus et elit purus. Curabitur ipsum enim, scelerisque vitae condimentum ac, cursus eget quam. Nullam volutpat dui ut risus pulvinar at fringilla sem tristique. Nulla facilisi.
+          Donec posuere euismod purus, eu scelerisque risus pellentesque eu. Vestibulum sed tincidunt metus. <a href="#">Read More &raquo;</a></p>
+        <footer>Widget Footer</footer>
+      </article>
+      <article class="widget">
+        <header>
+          <h2>Sample Sidebar Item </h2>
+        </header>
+        <p>Quisque justo erat, varius placerat fermentum vel, iaculis vel ligula. Phasellus et elit purus. Curabitur ipsum enim, scelerisque vitae condimentum ac, cursus eget quam. Nullam volutpat dui ut risus pulvinar at fringilla sem tristique. Nulla facilisi.
+          Donec posuere euismod purus, eu scelerisque risus pellentesque eu. Vestibulum sed tincidunt metus. <a href="#">Read More &raquo;</a></p>
+        <footer>Widget Footer</footer>
+      </article>
+    </div>
+  </aside>
+  <!--#secondary -->
+  <!--#content -->
+  <footer id="colophon" role="contentinfo">
+    <h6>&copy; 2023 Your Name</h6>
+  </footer>
+</body>
+
+</html>
